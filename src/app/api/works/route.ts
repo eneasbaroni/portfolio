@@ -27,7 +27,6 @@ export async function POST(req: NextRequest) {
             await connectMongoDB();      
             const data = {...body, token: undefined}
             const work = await workDAO.create(data);
-            revalidatePath('/', 'layout')
             return NextResponse.json(work);
         } else {
             return NextResponse.json({ message: 'Invalid token' });
