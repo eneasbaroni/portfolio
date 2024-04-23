@@ -1,0 +1,180 @@
+:root {
+    --main-color: #fff;
+    --second-color: #0f0f11;
+    --third-color: #c3e0c5;
+    --main-bg: #0f0f11;
+    --second-bg: #fff;
+}
+
+@font-face {
+    font-family: "White-Inktra";
+    src: url("../../public/fonts/ABCWhyteInktrap-Regular.otf");
+}
+
+@font-face {
+    font-family: "Clash-Regular";
+    src: url("../../public/fonts/ClashDisplay-Regular.otf");
+}
+
+@font-face {
+    font-family: "Clash-Medium";
+    src: url("../../public/fonts/ClashDisplay-Medium.otf");
+}
+
+@font-face {
+    font-family: "Nautica";
+    src: url("../../public/fonts/Nautica.otf");
+}
+
+* {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--main-color);
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 1rem 2.5rem 0;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+    @media (max-width: 768px) {
+        padding: 1rem 1.5rem 0;
+    }
+}
+
+p, label, input, .form-control {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.08rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.text-end {
+    text-align: end;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.divContainer {         
+
+    @media screen and (max-width: 992px) {
+            /* 1rem paddin app 1rem margin navbar 22px navbar 2px border narvbar 1.5rem padding footer  */
+            min-height: calc(100vh - 1rem - 25px - 2px - 1.5rem);
+    }
+
+    @media screen and (max-width: 576px) {
+        /* 1rem paddin app 1rem margin navbar 17px navbar 2px border narvbar 1.5rem padding footer  */
+        min-height: calc(100vh - 1rem - 21px);
+    }
+}
+
+.h1 {
+    font-family: "Clash-Medium", sans-serif;
+    font-size: 7.5vw;
+    line-height: 1em;
+    font-weight: 400;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 7vw;
+    }
+
+    @media screen and (max-width: 576px) {
+            font-size: 10vw;    
+    }
+
+    span {
+        font-family: "Nautica", sans-serif;
+        font-size: 10vw;
+        display: inline;
+        margin-right: 1vw;
+
+        @media screen and (max-width: 576px) {  
+            font-size: 12vw;
+        }
+    }
+}
+
+.h2 {
+    font-family: "Clash-Medium", sans-serif;
+    font-size: 5vw;
+    line-height: 1em;
+    font-weight: 400;
+}
+
+.mainText {
+    font-size: 1vw;
+    font-weight: 200;
+    letter-spacing: -0.03em;
+    line-height: 1.1em;
+
+    @media screen and (max-width: 1200px) {   
+        font-size: 1.2vw;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: 2.5vw;
+    }
+}
+
+input {
+    color: black;
+}
+
+#notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 576px) {
+        min-height: calc(100vh - 1rem - 21px);
+    }
+
+    a {
+        margin-top: 1rem;
+        text-decoration: none;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--main-color);
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out;
+        }
+
+        &:hover {
+            &:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+
+        span {
+            font-family: "Nautica", sans-serif;
+            font-size: 5vw;
+            display: inline;
+            margin-right: 1vw;
+        
+        }
+    }
+    
+}

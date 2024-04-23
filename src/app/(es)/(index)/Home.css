@@ -1,0 +1,32 @@
+#home {
+
+    h1 {
+        @media screen and (max-width: 576px) {
+            font-size: 8vw;  
+        }
+    }
+
+    .homeDesktop {
+        display: block;
+
+        @media screen and (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    .homeMobile {
+        display: none;
+
+        @media screen and (max-width: 576px) {
+            display: block;
+            width: calc(100vw - 3rem);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        min-height: calc(100vh - 1rem - 21px);
+        display: flex;
+        align-items: center;
+    }
+    
+}
