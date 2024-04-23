@@ -26,10 +26,7 @@ export async function POST(req: NextRequest) {
         if (token == process.env.NEXT_PUBLIC_SECRET_TOKEN) {            
             await connectMongoDB();      
             const data = {...body, token: undefined}
-            const work = await workDAO.create(data);
-            revalidatePath('/works', 'page');
-            revalidatePath('/en/works', 'page');
-            return NextResponse.json(work);
+            const work = await workDAO.create(data);            return NextResponse.json(work);
         } else {
             return NextResponse.json({ message: 'Invalid token' });
         }
