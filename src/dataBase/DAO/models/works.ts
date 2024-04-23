@@ -4,13 +4,13 @@ const workCollections = 'work'
 
 /* 
 work example
- title: "Ceci Torres",
-    type: "2024/Freelance - Diseño y Desarrollo",
-    description: "Sitio Web para Cecilia Torres",
-    url: "/images/ceci.png",
-    web: "https://ceciliatorres.com.ar/",
-    technologies: ['next', 'typescript'],
-    language: 'es',
+    "title": "Ceci Torres",
+    "type": "2024/Freelance - Diseño y Desarrollo",
+    "description": "Sitio Web para Cecilia Torres",
+    "url": "/images/ceci.png",
+    "web": "https://ceciliatorres.com.ar/",
+    "technologies": ["next", "typescript"],
+    "language": "es",
 */
 
 

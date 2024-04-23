@@ -14,13 +14,25 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+
     try {
-        await connectMongoDB();
         const body = await req.json();
-        const work = await workDAO.create(body);
-        revalidatePath('/works');
-        revalidatePath('/en/works/');
-        return NextResponse.json(work);
+        const token = body.token
+
+        if (!token) {
+            return NextResponse.json({ message: 'Invalid token' });
+        } 
+
+        if (token == process.env.NEXT_PUBLIC_SECRET_TOKEN) {            
+            await connectMongoDB();      
+            const data = {...body, token: undefined}
+            const work = await workDAO.create(data);
+            revalidatePath('/works');
+            revalidatePath('/en/works/');
+            return NextResponse.json(work);
+        } else {
+            return NextResponse.json({ message: 'Invalid token' });
+        }
     } catch (error) {
         console.error(error);
     }

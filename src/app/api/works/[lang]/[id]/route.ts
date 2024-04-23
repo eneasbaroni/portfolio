@@ -16,12 +16,23 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
 //PUT
 export async function PATCH(req: Request, { params }: { params: { id: string } }) {
     try {
-        await connectMongoDB();
         const body = await req.json();
-        const work = await workDAO.update(params.id, body);
-        revalidatePath('/works');
-        revalidatePath('/en/works/');
-        return NextResponse.json(work);
+        const token = body.token;
+
+        if (!token) {
+            return NextResponse.json({ message: 'Invalid token' });
+        } 
+        
+        if (token == process.env.NEXT_PUBLIC_SECRET_TOKEN) {    
+            const data = {...body, token: undefined}        
+            await connectMongoDB();
+            const work = await workDAO.update(params.id, data);
+            revalidatePath('/works');
+            revalidatePath('/en/works/');
+            return NextResponse.json(work);
+        } else {
+            return NextResponse.json({ message: 'Invalid token' });
+        }
     } catch (error) {
         console.error(error);
     }
@@ -30,11 +41,21 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
 //DELETE
 export async function DELETE(req: Request, { params }: { params: { id: string } }) {
     try {
-        await connectMongoDB();
-        const work = await workDAO.delete(params.id);
-        revalidatePath('/works');
-        revalidatePath('/en/works/');
-        return NextResponse.json(work);
+        const body = await req.json();
+        const token = body.token
+        if (!token) {
+            return NextResponse.json({ message: 'Invalid token' });
+        }      
+
+        if (token == process.env.NEXT_PUBLIC_SECRET_TOKEN) {            
+            await connectMongoDB();
+            const work = await workDAO.delete(params.id);
+            revalidatePath('/works');
+            revalidatePath('/en/works/');
+            return NextResponse.json(work);
+        } else {
+            return NextResponse.json({ message: 'Invalid token' });
+        }
     } catch (error) {
         console.error(error);
     }
