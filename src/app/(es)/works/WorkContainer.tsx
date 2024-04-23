@@ -1,9 +1,10 @@
-'use client'
+export const dynamic = 'force-dynamic'
 
 import IWork from "@/lib/definitions"
 import Work from "./Work"
 
-// eslint-disable-next-line @next/next/no-async-client-component
+
+
 const WorkContainer = async () => {
     const URL = process.env.API_URL + '/api/works/es'
     const wokrs: IWork[] = await fetch(URL).then(res => res.json())
