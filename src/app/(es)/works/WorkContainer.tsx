@@ -1,9 +1,5 @@
-export const dynamic = 'force-dynamic'
-
 import IWork from "@/lib/definitions"
 import Work from "./Work"
-
-
 
 const WorkContainer = async () => {
     const URL = process.env.API_URL + '/api/works/es'

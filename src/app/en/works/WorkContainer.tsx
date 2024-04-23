@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic'
 import IWork from "@/lib/definitions"
 import Work from "./Work"
 
