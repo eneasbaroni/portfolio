@@ -53,7 +53,7 @@ body {
 p, label, input, .form-control {
     font-size: 1.3rem;
     line-height: 1.5rem;
-    letter-spacing: -0.08rem;
+    letter-spacing: -0.03rem;
     margin: 0;
     padding: 0;
     font-weight: 400;
