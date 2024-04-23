@@ -27,6 +27,8 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
             const data = {...body, token: undefined}        
             await connectMongoDB();
             const work = await workDAO.update(params.id, data);
+            revalidatePath('/works', 'page');
+            revalidatePath('/en/works', 'page');
             return NextResponse.json(work);
         } else {
             return NextResponse.json({ message: 'Invalid token' });
@@ -48,6 +50,8 @@ export async function DELETE(req: Request, { params }: { params: { id: string } 
         if (token == process.env.NEXT_PUBLIC_SECRET_TOKEN) {            
             await connectMongoDB();
             const work = await workDAO.delete(params.id);
+            revalidatePath('/works', 'page');
+            revalidatePath('/en/works', 'page');
             return NextResponse.json(work);
         } else {
             return NextResponse.json({ message: 'Invalid token' });
