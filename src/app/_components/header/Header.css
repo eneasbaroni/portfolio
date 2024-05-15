@@ -91,7 +91,7 @@ header {
     
     .mobileLinks {
         width: 100%;
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         justify-content: center;
         align-content: flex-start;
