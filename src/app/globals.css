@@ -81,9 +81,21 @@ p, label, input, .form-control {
     }
 }
 
+.clashRegular {   
+    font-family: "Clash-regular", sans-serif !important;
+    font-size: 7vw !important;    
+}
+
+.clashSmall {   
+    font-family: "Clash-regular", sans-serif !important;
+    font-size: 5.5vw !important;    
+    line-height: 5.5vw !important;
+    display: block !important;
+}
+
 .h1 {
     font-family: "Clash-Medium", sans-serif;
-    font-size: 7.5vw;
+    font-size: 7.3vw;
     line-height: 1em;
     font-weight: 400;
 
@@ -92,7 +104,7 @@ p, label, input, .form-control {
     }
 
     @media screen and (max-width: 576px) {
-            font-size: 10vw;    
+            font-size: 7.5vw;             
     }
 
     span {
@@ -115,6 +127,7 @@ p, label, input, .form-control {
 }
 
 .mainText {
+    margin-top: 1vw;
     font-size: 1vw;
     font-weight: 200;
     letter-spacing: -0.03em;
