@@ -7,6 +7,7 @@ interface IWork {
     technologies: string[];
     language: string;
     _id?: string;    
+    github?: string;
 }
 
 export default IWork

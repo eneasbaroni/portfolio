@@ -11,6 +11,7 @@ work example
     "web": "https://ceciliatorres.com.ar/",
     "technologies": ["next", "typescript"],
     "language": "es",
+    "github": "https://github.com/ceciliatorres/ceciliatorres.com.ar"
 */
 
 
@@ -21,7 +22,8 @@ const workSchema = new Schema({
     url: {type: String, required: true},
     web: {type: String, required: true},
     technologies: {type: Array, required: true},
-    language: {type: String, required: true},    
+    language: {type: String, required: true},  
+    github: {type: String},  
 })
 
 const Work = models.work || mongoose.model(workCollections, workSchema)

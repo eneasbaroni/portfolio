@@ -21,18 +21,18 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        height: 11vw;
+        height: 12vw;
 
         @media screen and (max-width: 768px) {
             
-            background-position: 50% 200px;            
+            background-position: 50% 220px;            
             padding-inline: 1.5rem;
             padding: 1.5rem 0;
             padding: 1.5rem 1.5rem;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
-            height: 200px;
+            height: 220px;
 
             &:hover {
                 height: 250px;
@@ -104,13 +104,27 @@
 
                     @media screen and (max-width: 768px) {  
                         height: 30px;
+                        padding-left: 0;
+                        padding-right: 0.5rem;
                     }
+                }
+            }
+
+            .repoLink {
+                margin-top: -10px;
+
+                @media screen and (max-width: 768px) {
+                    margin-top: -5px;
+                }
+                .workLink {
+                    z-index: 8!important;
                 }
             }
 
             .workLink {
                 display: inline-block !important;
                 position: relative;
+                z-index: 10;
         
                 &:after {
                     content: "";
@@ -130,6 +144,10 @@
                         transform: scaleX(1);
                         transform-origin: bottom left;
                     }
+                }
+
+                .githubIcon {
+                    transform: translate(0, 0.3rem);
                 }
             }
 
