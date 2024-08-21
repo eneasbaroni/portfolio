@@ -109,14 +109,14 @@ header {
         width: 100% !important;
         text-align: left;
         border-bottom: 1px solid var(--main-bg);
-        height: 9vw;
+        height: 10.5vw;
         overflow: hidden;
-        margin-top: 2vw;
+        margin-top: 1vw;
         color: var(--main-bg);
-        padding-top: 1px;  
+        padding-top: 5px;  
         line-height: 1.1em;    
         letter-spacing: -.03em;
-        text-decoration: none;
+        text-decoration: none;  
 
         span {
             font-family: 'Nautica', sans-serif;
