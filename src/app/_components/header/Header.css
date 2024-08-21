@@ -76,7 +76,7 @@ header {
   
     .mobileHeader {
        width: 100%;
-       display: flex;
+       display: flex !important;
        flex-direction: row;
        justify-content: space-between;
        align-content: center;
