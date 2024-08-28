@@ -6,7 +6,7 @@ const Home = () => {
                     <h1 className="h1">
                         <span>D</span>ESARROLL<span>A</span>DOR WEB<br/>
                         <span className="clashRegular">
-                            +DISEÑADOR GRAFICO<br/>
+                            & DISEÑADOR GRAFICO<br/>
                         </span>
                         <span className="clashSmall">
                             DE CORDOBA, 
@@ -20,7 +20,7 @@ const Home = () => {
                     <h1 className="h1">
                         <span style={{marginLeft: '-2.5vw'}}>W</span>EB <span>D</span>EVELOPER<br/>
                         <span className="clashRegular">
-                            +DISEÑADOR GRAFICO<br/>
+                            & DISEÑADOR GRAFICO<br/>
                         </span>
                         <span className="clashSmall">
                             DE CORDOBA,

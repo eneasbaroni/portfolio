@@ -6,7 +6,7 @@ const Home = () => {
                     <h1 className="h1">
                         <span style={{marginLeft: '-2.5vw'}}>W</span>EB <span>D</span>EVELOPER<br/>
                         <span className="clashRegular">
-                            +GRAPHIC DESIGNER<br/>
+                            & GRAPHIC DESIGNER<br/>
                         </span>
                         <span className="clashSmall">
                             FROM CORDOBA,
@@ -20,7 +20,7 @@ const Home = () => {
                     <h1 className="h1">
                         <span style={{marginLeft: '-2.5vw'}}>W</span>EB <span>D</span>EVELOPER<br/>
                         <span className="clashRegular">
-                            +GRAPHIC DESIGNER<br/>
+                            & GRAPHIC DESIGNER<br/>
                         </span>
                         <span className="clashSmall">
                             FROM CORDOBA,
