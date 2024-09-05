@@ -2,42 +2,21 @@ const Home = () => {
     return (
         <main id="home">
             <div>
-                <div className="homeDesktop">
-                    <h1 className="h1">
-                        <span style={{marginLeft: '-2.5vw'}}>W</span>EB <span>D</span>EVELOPER<br/>
-                        <span className="clashRegular">
-                            & GRAPHIC DESIGNER<br/>
-                        </span>
-                        <span className="clashSmall">
-                            FROM CORDOBA,
-                        </span>
-                        <span className="clashSmall" style={{marginTop:'-1.2vw'}}>                        
-                            AR<span style={{marginLeft: '2vw'}}>g</span>ENTINA.
-                        </span>
+                <div>                    
+                    <h1 className="h1Home">
+                        BLEN<span className="nautica">D</span>ING <span className="bigilla">ART AND <br/>
+                        DESIGN</span> INTO IM<span className="nauticaB">p</span><span className="translate h1Home">ACT</span> <br/>
+                        <span className="bigilla">DIGITAL EXPERIENCES.</span>
+                                              
                     </h1>
                 </div>
-                <div className="homeMobile">
-                    <h1 className="h1">
-                        <span style={{marginLeft: '-2.5vw'}}>W</span>EB <span>D</span>EVELOPER<br/>
-                        <span className="clashRegular">
-                            & GRAPHIC DESIGNER<br/>
-                        </span>
-                        <span className="clashSmall">
-                            FROM CORDOBA,
-                        </span>
-                        <span className="clashSmall" style={{marginTop:'-1.2vw'}}>                        
-                        ARG<span style={{marginLeft: '2vw', marginRight: '0.1vw'}}>e</span>NTINA.
-                        </span>
-                    </h1>
-                </div>
-
                 <p className="mainText">
-                    Hi! I am Eneas.<br/>
-                    I am a full-stack web developer, with experience in graphic design and architecture.<br/>
-                    Currently working as a freelance developer.
-                </p> 
-            </div>
 
+                    Hi! My name is Eneas.<br/>
+                    I&apos;m a <span>Full-Stack Developer</span> with experience in graphic design and architecture.<br/>
+                    I focus on creating digital solutions that are not only functional but also true works of art                    
+                </p>                    
+            </div>
         </main>
     )
 }

@@ -99,18 +99,10 @@ p, label, input, .form-control {
 
 .bigilla {
     font-family: "Bigilla", sans-serif !important;
-    font-size: 7vw !important;
-    line-height: 1em;
-}
-
-.translate {
-    margin-left: -2vw;
-    font-family: "Clash-Regular", sans-serif;
-    font-size: 7vw !important;
 }
 
 .h1 {
-    font-family: "Clash-Regular", sans-serif;
+    font-family: "Clash-Medium", sans-serif;
     font-size: 7.3vw;
     line-height: 1em;
     font-weight: 400;
@@ -135,10 +127,6 @@ p, label, input, .form-control {
     }
 }
 
-.h1b {
-    font-family: "Clash-Regular", sans-serif !important;     
-}
-
 .h2 {
     font-family: "Clash-Medium", sans-serif;
     font-size: 5vw;
@@ -153,12 +141,29 @@ p, label, input, .form-control {
     letter-spacing: -0.03em;
     line-height: 1.1em;
 
+    & span {
+        font-weight: 400;
+        font-size: 1vw;
+    }
+
     @media screen and (max-width: 1200px) {   
         font-size: 1.2vw;
+        font-size: max(1.2vw, 12px);
+
+        & span {            
+            font-size: 1.2vw;
+            font-size: max(1.2vw, 12px);
+        }
     }
 
     @media screen and (max-width: 576px) {
         font-size: 2.5vw;
+        font-size: max(2.5vw, 10px);
+
+        & span {            
+            font-size: 1.2vw;
+            font-size: max(2.5vw, 10px);
+        }
     }
 }
 

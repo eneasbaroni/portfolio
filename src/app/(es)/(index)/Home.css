@@ -1,26 +1,56 @@
-#home {
+#home {   
 
-    h1 {
+    .h1Home {
+        font-family: "Clash-Regular", sans-serif;
+        font-size: 7.3vw;
+        line-height: 0.1em;
+        font-weight: 400;
+    
+        @media screen and (max-width: 1200px) {
+            font-size: 7.5vw;
+        }
+    
         @media screen and (max-width: 576px) {
-            font-size: 8vw;  
+                font-size: 8vw;  
+                font-size: max(8vw, 1.6rem);           
+        }
+    
+        .nautica {
+            font-family: "Nautica", sans-serif;
+            font-size: 7.3vw;
+            display: inline;
+            margin-right: 1vw;
+    
+            @media screen and (max-width: 576px) {  
+                font-size: 8vw;                
+            }
+        }
+
+        .nauticaB {
+            font-family: "Nautica", sans-serif;
+            font-size: 10vw;
+            display: inline;
+            margin-right: 1vw;
+    
+            @media screen and (max-width: 576px) {  
+                font-size: 12vw;                
+            }
+        }
+    }    
+
+    .bigilla {
+        font-family: "Bigilla", sans-serif !important;
+        font-size: 7vw !important; 
+        line-height: 1em;
+
+        @media screen and (max-width: 576px) {
+            font-size: 7vw;  
+            font-size: max(7vw, 1.6rem) !important;           
         }
     }
-
-    .homeDesktop {
-        display: block;
-
-        @media screen and (max-width: 576px) {
-            display: none;
-        }
-    }
-
-    .homeMobile {
-        display: none;
-
-        @media screen and (max-width: 576px) {
-            display: block;
-            width: calc(100vw - 3rem);
-        }
+    
+    .translate {
+        margin-left: -2vw;        
     }
 
     @media screen and (max-width: 576px) {
