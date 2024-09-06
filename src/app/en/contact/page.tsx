@@ -1,9 +1,12 @@
+import Greet from "@/app/(es)/contact/components/Greet"
+
 const Contact = () => {
     return (
         <main id="contact">
             <div className='projectMind'>
                 <p className='mainText'>Do you have a project in mind?</p>
                 <a className='mailme' href="mailto:eneasbaroni@gmail.com?Subject=Contacto%20desde%20web%20personal"><h1 className='h1'>LET&apos;S TALK!!</h1></a>
+                <Greet/>
                 <a href="#medias" className='media'><p>↓</p></a>
             </div>
 
