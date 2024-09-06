@@ -1,7 +1,7 @@
 :root {
     --main-color: #fff;
     --second-color: #0f0f11;
-    --third-color: #c3e0c5;
+    --third-color: rgb(255, 102, 0);
     --main-bg: #0f0f11;
     --second-bg: #fff;
 }
@@ -100,6 +100,11 @@ p, label, input, .form-control {
 .bigilla {
     font-family: "Bigilla", sans-serif !important;
 }
+
+.nautica {
+    font-family: "Nautica", sans-serif;
+}
+
 
 .h1 {
     font-family: "Clash-Medium", sans-serif;
