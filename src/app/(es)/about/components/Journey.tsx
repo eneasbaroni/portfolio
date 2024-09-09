@@ -8,7 +8,7 @@ const cormorant = Cormorant({
 const Journey = () => {
   return (
     <div id='journey'>
-        <h1 className="h2">MI VIAJE</h1>
+        <h2 className="h2">MI VIAJE</h2>
 
         <div className="journeysContainer">
             <div className="journey">
