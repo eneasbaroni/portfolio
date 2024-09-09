@@ -137,6 +137,10 @@ p, label, input, .form-control {
     font-size: 5vw;
     line-height: 1em;
     font-weight: 400;
+
+    @media screen and (max-width: 576px) {
+        font-size: 7vw;
+    }
 }
 
 .mainText {
