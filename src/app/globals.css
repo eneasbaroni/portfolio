@@ -30,11 +30,6 @@
     src: url("../../public/fonts/Bigilla.otf");
 }
 
-@font-face {
-    font-family: "Cormorant";
-    src: href('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
-}
-
 * {
     font-size: 16px;
     font-weight: 400;
