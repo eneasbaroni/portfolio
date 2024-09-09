@@ -1,3 +1,5 @@
+const actualYear = new Date().getFullYear()
+
 const FooterMobile = () => {
 
     return (
@@ -15,7 +17,7 @@ const FooterMobile = () => {
             </div>
             <div className='footerRights'>
                 <p>Design and development by Eneas Baroni</p>
-                <p>Eneas Baroni ® 2023 all rights reserved</p>
+                <p>Eneas Baroni ® {actualYear} all rights reserved</p>
             </div>
         </footer>
 
