@@ -13,11 +13,11 @@ const Journey = () => {
         <div className="journeysContainer">
             <div className="journey">
                 <div className="titles">
-                    <h3>FULL STACK DEVELOPER</h3>
-                    <h4 className={cormorant.className}>FREELANCE</h4>
+                    <h3>TUTOR PROGRAMACIÓN BACKEND</h3>
+                    <h4 className={cormorant.className}>CODERHOUSE</h4>
                 </div>
                 <div className="info">
-                    <p>Junio 2021 - Actualmente</p>
+                    <p>Noviembre 2023 - Actualmente</p>
                 </div>
             </div>
             <div className="journey">
@@ -31,11 +31,20 @@ const Journey = () => {
             </div>
             <div className="journey">
                 <div className="titles">
-                    <h3>FULL STACK DEVELOPER</h3>
-                    <h4 className={cormorant.className}>FREELANCE</h4>
+                    <h3>PROJECT MANAGER</h3>
+                    <h4 className={cormorant.className}>SIMSA</h4>
                 </div>
                 <div className="info">
-                    <p>Junio 2021 - Actualmente</p>
+                    <p>Junio 2016 - Actualmente</p>
+                </div>
+            </div>
+            <div className="journey">
+                <div className="titles">
+                    <h3>PROJECT DESIGNER</h3>
+                    <h4 className={cormorant.className}>TESICOM</h4>
+                </div>
+                <div className="info">
+                    <p>Marzo 2012 - Junio 2016</p>
                 </div>
             </div>
         </div>
