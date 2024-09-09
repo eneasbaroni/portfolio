@@ -1,105 +1,254 @@
 #about {
-    
-    min-height: calc(100dvh - 1rem - 21px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 
-    & .h2 {
-        margin: 2rem 0;
-    }
+	min-height: calc(100dvh - 1rem - 21px);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 
-    & .historyContainer {
-        display: flex;
-        justify-content: space-between;
-        
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
-        position: relative;
+	& .h2 {
+		margin: 2rem 0;
+	}
 
-        & .history {
-            width: 30vw;
-            height: 30vw;
-            /* border: solid 1px var(--third-color); */
-            border: solid 1px rgb(175, 174, 174);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            transition: all 0.3s ease-in-out;            
-            border-radius: 0;
-            
-            &:hover {
-                border-radius: 3rem;  
-                border: solid 1px var(--main-bg);  
-                background-color: var(--third-color);           
-            }
-            
+	& .historyContainer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
-            & .hstImg {
-                width: 70%;
-                height: 70%;
-                object-fit: contain;
-                object-position: center;
-            }
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.5rem;
+		position: relative;
 
-            & .hst {
-                display: none;
-                position: absolute;
-                width: calc(100%); 
-                background-color: var(--third-color);
-                opacity: 0.95;
-                left: 0;
-                top: 0;
-                height: 30vw;
-                border: solid 1px var(--third-color); 
-                border-radius: 3rem;  
-                padding: 3rem;   
-                
-                & h3 {
-                    font-size: 2rem;
-                    margin-bottom: 0.5rem;
+		& .history {
+			width: 30vw;
+			height: 30vw;
+			/* border: solid 1px var(--third-color); */
+			border: solid 1px rgb(175, 174, 174);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			transition: all 0.3s ease-in-out;
+			border-radius: 0;
 
-                    & span {
-                        font-size: 2rem;
-                    }
-                }
+			@media screen and (max-width: 1280px) {
+				height: 40vw;
+			}
 
-                & p {
-                    font-size: 1.5rem;
-                    & span {
-                        font-size: 1.8rem;
-                    }
-                }
-                        
-            }
+			@media screen and (max-width: 1024px) {
+				width: calc(100vw - 48px);
+			}
 
-            & .hstActive {
-                display: flex;
-                flex-direction: column;
-                overflow: hidden;
-                animation: escalado 0.3s ease-in-out;                 
-            }
-        }
-    }
+			@media screen and (max-width: 768px) {
+				height: 55vw;
+			}
+
+			@media screen and (max-width: 576px) {
+				height: 75vw;
+			}
+
+			@media screen and (max-width: 440px) {
+				height: 135vw;
+			}
 
 
-    
+			&:hover {
+				border-radius: 3rem;
+				border: solid 1px var(--main-bg);
+				background-color: var(--third-color);
+			}
+
+
+			& .hstImg {
+				width: 70%;
+				height: 70%;
+				object-fit: contain;
+				object-position: center;
+			}
+
+			& .hst {
+				display: none;
+				position: absolute;
+				width: calc(100%);
+				background-color: var(--third-color);
+				opacity: 0.95;
+				left: 0;
+				top: 0;
+				height: 30vw;
+				border: solid 1px var(--third-color);
+				border-radius: 3rem;
+				padding: 3rem;
+
+				@media screen and (max-width: 1280px) {
+					height: 40vw;
+					padding: 2rem;
+				}
+
+				@media screen and (max-width: 1024px) {
+					justify-content: center;
+				}
+
+				@media screen and (max-width: 768px) {
+					height: 55vw;
+				}
+
+				@media screen and (max-width: 576px) {
+					padding: 1.5rem;
+					height: 75vw;
+				}
+
+				@media screen and (max-width: 440px) {
+					height: 135vw;
+				}
+
+				& h3 {
+					font-size: 2rem;
+					margin-bottom: 0.5rem;
+
+					& span {
+						font-size: 2rem;
+
+						@media screen and (max-width: 576px) {
+							font-size: 1.6rem;
+						}
+					}
+
+					@media screen and (max-width: 576px) {
+						font-size: 1.6rem;
+					}
+				}
+
+				& p {
+					font-size: 1.25rem;
+
+					@media screen and (max-width: 1536px) {
+						font-size: 1.15rem;
+						line-height: 1.15rem;
+					}
+
+					& span {
+						font-size: 1.6rem;
+
+						@media screen and (max-width: 1536px) {
+							font-size: 1.3rem;
+						}
+					}
+				}
+
+			}
+
+			& .hstActive {
+				display: flex;
+				flex-direction: column;
+				overflow: hidden;
+				animation: escalado 0.3s ease-in-out;
+			}
+
+			& .smallbtn {
+				background: none;
+				position: absolute;
+				bottom: 5px;
+				right: 12px;
+				display: flex;
+				align-items: center;
+
+				@media screen and (min-width: 576px) {
+					display: none;
+				}
+				
+				& .light {
+					background-color: var(--third-color);
+					animation: fadeA 1s ease-in-out infinite;
+					width: 10px;
+					height: 10px;
+					border-radius: 100%;
+					margin-right: 0.5rem;
+				}
+
+				& p {
+					font-size: 0.9rem;
+					color: var(--third-color);
+				}
+			}
+		}
+	}
+
+
+
 }
 
 @keyframes escalado {
-    0% {
-      /* transform: scale(0); */
-      opacity: 0;
-      border-radius: 0px;
-      /* left:-50% */
-      /* top: -150%; */
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0.95;
-      left: 0;
-      /* top: 0; */
-      border-radius: 3rem;
-    }
-  }
+	0% {
+		/* transform: scale(0); */
+		opacity: 0;
+		border-radius: 0px;
+		/* left:-50% */
+		/* top: -150%; */
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 0.95;
+		left: 0;
+		/* top: 0; */
+		border-radius: 3rem;
+	}
+}
+
+@keyframes fadeA {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	
+	}
+	
+}
+
+/* Journey */
+
+#journey {
+	display: flex;	
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 2rem;
+	
+	& .h2 {
+		margin: 0;
+	}
+
+	& .journeysContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		& .journey {
+			width: 1000px;
+			display: flex;
+			border-top: solid 1px var(--main-color);
+			border-bottom: solid 1px var(--main-color);
+			justify-content: space-between;
+			align-items: flex-start;
+			padding: 1rem 0;
+
+			& .titles {
+				width: 40%;
+				display: flex;
+				flex-direction: column;	
+				
+				& h3 {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
