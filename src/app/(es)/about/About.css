@@ -216,11 +216,11 @@
 
 /* Journey */
 
-#journey {
+#journey, #why, #skills {
 	display: flex;	
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-top: 2rem;
+	margin-top: 6rem;
 
 	@media screen and (max-width: 1024px) {
 		flex-direction: column;
@@ -230,6 +230,11 @@
 	
 	& .h2 {
 		margin: 0;
+		width: 30vw;
+
+		@media screen and (max-width: 1024px) {
+			width: 100%;
+		}
 	}
 
 	& .h2b {
@@ -240,16 +245,29 @@
    		}
 	}
 
+	& p {
+		font-size: 1.1rem;
+		opacity: 0.8;
+
+		@media screen and (max-width: 576px) {
+			width: 100%;
+			text-align: end;
+			font-size: 0.9rem;
+		}
+	}
+
 	& .journeysContainer {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		border-top: solid 1px var(--main-color);
 		width: 61.5vw;
+		width: calc(60vw + (100vw - 80px - 90vw) / 2);
 
 		@media screen and (max-width: 1024px) {
 			width: 100%;
 			margin-top: 2rem;
+			border-top: none;
 		}
 
 		& .journey {
@@ -299,3 +317,115 @@
 		}
 	}
 }
+
+#hanger {
+	margin-top: 6rem;
+	& * {
+		text-align: left;
+
+		@media screen and (max-width: 1024px) {
+			text-align: center;
+		}
+
+		@media screen and (max-width: 576px) {	
+			line-height: 9vw;
+		}
+	}
+
+	& .ntc {
+		font-family: "Nautica", sans-serif;
+		font-size: 7vw;
+
+		@media screen and (max-width: 576px) {
+			font-size: 9vw;
+		}
+	}	
+	
+	& .ntcMl {
+		margin-left: 1vw;
+	}
+
+	& .ntcMr {
+		margin-right: 1vw;
+	}
+}
+
+
+/* WHY */
+#why {
+	& p {
+		padding: 1rem 0;
+		border-bottom: solid 1px var(--main-color);
+	}
+}
+
+/* SKILS */
+
+.skillsContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-top: solid 1px var(--main-color);
+	width: 61.5vw;
+	width: calc(60vw + (100vw - 80px - 90vw) / 2);
+	overflow-x: hidden;
+	
+
+	@media screen and (max-width: 1024px) {
+		width: 100%;
+		margin-top: 2rem;
+		border-top: none;
+	}
+
+	& .carrousel {
+		display: flex;
+		width: 400%;
+		flex-direction: row;
+		overflow-x: hidden;
+		height: 7vw;
+		border-bottom: solid 1px var(--main-color);
+
+
+		/* pausar animacion al hover */
+		&:hover div {
+			animation-play-state: paused;		
+		}
+
+		&:hover * {
+			color: var(--third-color)			
+		}
+
+		& .crrA {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			animation: scroll 40s linear infinite;
+			width: 100%;			
+		}
+
+		& .crrB {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			animation: scrollB 40s linear infinite;
+			width: 100%;
+		}
+
+		& p {
+			padding: 1rem 1rem;
+			font-size: 4vw !important;
+		}
+	}
+}
+
+@keyframes scroll {
+	0% {transform: translateX(0);}
+	100% {transform: translateX(-100%);}
+}
+@keyframes scrollB {
+	0% {transform: translateX(0%);}
+	100% {transform: translateX(-100%);}
+}
+	
