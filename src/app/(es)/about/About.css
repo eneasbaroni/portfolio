@@ -236,7 +236,7 @@
 		font-size: 4.6vw !important;		
 
 		@media screen and (max-width: 576px) {
-			font-size: 7vw;
+			font-size: 7vw !important;
    		}
 	}
 
