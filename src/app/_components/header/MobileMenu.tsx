@@ -29,7 +29,7 @@ const MobileMenu = () => {
         <header>
             {pathname.startsWith("/en") ? <Link href="/en" className='linkHome'>Eneas Baroni ®</Link> : <Link href="/" className='linkHome'>Eneas Baroni ®</Link>}
             <div className="menu">
-                <img className="menuIcon" width={25} src='./images/menu.svg' alt="menu" onClick={handleMenu} />
+                <img className="menuIcon" width={25} src='/images/menu.svg' alt="menu" onClick={handleMenu} />
             </div>
 
             {navbarOpen &&

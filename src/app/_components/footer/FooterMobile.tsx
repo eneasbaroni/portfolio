@@ -5,7 +5,7 @@ const FooterMobile = () => {
     return (
 
         <footer className='mobileFooter'>
-            <img className='logo' src='./images/logo.svg' alt='logo' />
+            <img className='logo' src='/images/logo.svg' alt='logo' />
             <div>
                 <a className='mailme' href="mailto:eneasbaroni@gmail.com?Subject=Contacto%20desde%20web%20personal">eneasbaroni@gmail.com</a>
                 <p>Córdoba, Argentina</p>
