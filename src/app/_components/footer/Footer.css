@@ -34,6 +34,66 @@ footer {
     }
 }
 
+/* Desktop Footer */
+
+#desktopFooter {
+    width: 100vw;
+    background-color: var(--main-bg);
+    transform: translateX(-2.5rem);
+    
+    display: flex;
+    margin-bottom: 0;   
+
+
+    & .footerContainer {
+        width: 100%; 
+        margin: auto;
+        height: 100vh;
+        background-color: var(--second-bg);
+        border-radius: 5vw 5vw 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        overflow-y: hidden;
+
+        border-radius: 5vw 5vw 0 0;
+        margin: 5rem 5rem 0;
+
+        view-timeline-name: --footer;
+        view-timeline-axis: block;
+
+        animation-timeline: --footer;
+        animation-name: show;
+
+        animation-range: entry 20% cover 75%;
+        animation-fill-mode: both;
+
+        & h3 {            
+            font-family: "Clash-Medium", sans-serif;
+            font-weight: 700;
+            font-size: 12vw;
+            line-height: 9vw;
+            background: rgb(15,15,17);
+            background: linear-gradient(180deg, rgba(15,15,17,0.15) 0%, rgba(15,15,17,0) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+    }
+}
+
+@keyframes show {
+    from {
+        border-radius: 0 0 0 0;
+        margin: 0 0 0;
+    }
+    to {
+        border-radius: 5vw 5vw 0 0;
+        margin: 5rem 5rem 0;
+    }
+}
+
 /* Mobile Footer */
 
 .mobileFooter {
