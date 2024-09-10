@@ -216,7 +216,7 @@
 
 /* Journey */
 
-#journey {
+#journey, #why {
 	display: flex;	
 	justify-content: space-between;
 	align-items: flex-start;
@@ -230,6 +230,11 @@
 	
 	& .h2 {
 		margin: 0;
+		width: 30vw;
+
+		@media screen and (max-width: 1024px) {
+			width: 100%;
+		}
 	}
 
 	& .h2b {
@@ -240,16 +245,29 @@
    		}
 	}
 
+	& p {
+		font-size: 1.1rem;
+		opacity: 0.8;
+
+		@media screen and (max-width: 576px) {
+			width: 100%;
+			text-align: end;
+			font-size: 0.9rem;
+		}
+	}
+
 	& .journeysContainer {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		border-top: solid 1px var(--main-color);
 		width: 61.5vw;
+		width: calc(60vw + (100vw - 80px - 90vw) / 2);
 
 		@media screen and (max-width: 1024px) {
 			width: 100%;
 			margin-top: 2rem;
+			border-top: none;
 		}
 
 		& .journey {
@@ -297,5 +315,32 @@
 				}
 			}
 		}
+	}
+}
+
+#hanger {
+	& * {
+		text-align: center;
+
+		@media screen and (max-width: 576px) {	
+			line-height: 9vw;
+		}
+	}
+
+	& .ntc {
+		font-family: "Nautica", sans-serif;
+		font-size: 7vw;
+
+		@media screen and (max-width: 576px) {
+			font-size: 9vw;
+		}
+	}	
+	
+	& .ntcMl {
+		margin-left: 1vw;
+	}
+
+	& .ntcMr {
+		margin-right: 1vw;
 	}
 }
