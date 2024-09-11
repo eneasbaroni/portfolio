@@ -50,24 +50,43 @@ footer {
         margin: auto;
         height: 100vh;
         background-color: var(--second-bg);
-        border-radius: 5vw 5vw 0 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         overflow-y: hidden;
 
-        border-radius: 5vw 5vw 0 0;
-        margin: 5rem 5rem 0;
 
-        view-timeline-name: --footer;
-        view-timeline-axis: block;
+        & .footerLinks {
+            width: 100%;
+            padding: 5vw 5vw 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;           
+              
+            
+            & .pageLinks, .socialLinks {
+                display: flex;
+                width: 200px;
+                flex-direction: column;
+                border: solid red 1px;
 
-        animation-timeline: --footer;
-        animation-name: show;
+                & h4, .navItem {
+                    font-size: 1.5rem;
+                }
 
-        animation-range: entry 20% cover 75%;
-        animation-fill-mode: both;
+                & a {
+                    text-decoration: none;
+                }
+            }
+            
+            & * {
+                color: var(--main-bg);
+            }
+        }
+
+      
+
 
         & h3 {            
             font-family: "Clash-Medium", sans-serif;
@@ -80,17 +99,6 @@ footer {
             -webkit-text-fill-color: transparent;
 
         }
-    }
-}
-
-@keyframes show {
-    from {
-        border-radius: 0 0 0 0;
-        margin: 0 0 0;
-    }
-    to {
-        border-radius: 5vw 5vw 0 0;
-        margin: 5rem 5rem 0;
     }
 }
 
