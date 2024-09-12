@@ -2,10 +2,14 @@
 
 import { useEffect, useState } from "react"
 import FooterMobile from "./FooterMobile"
+import HomeFooter from "./HomeFooter"
+import { usePathname } from "next/navigation"
 import FooterDesktop from "./FooterDesktop"
 
 const Footer = () => {   
     const [viewWidth, setViewWidth] = useState<number>()
+
+    const pathname = usePathname()
 
     const handleViewWidth = () => {
         setViewWidth(window.innerWidth)
@@ -23,7 +27,7 @@ const Footer = () => {
     return (
         <>            
             {viewWidth && viewWidth < 576 && <FooterMobile/>}
-            {viewWidth && viewWidth >= 576 && <FooterDesktop/>}
+            {viewWidth && viewWidth >= 576 && pathname === "/" ? <HomeFooter/> : pathname === "/en" ? <HomeFooter/> :  <FooterDesktop/>}
         </>
     )
 }
