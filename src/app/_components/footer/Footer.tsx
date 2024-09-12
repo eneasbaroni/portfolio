@@ -26,8 +26,16 @@ const Footer = () => {
 
     return (
         <>            
-            {viewWidth && viewWidth < 576 && <FooterMobile/>}
-            {viewWidth && viewWidth >= 576 && pathname === "/" ? <HomeFooter/> : pathname === "/en" ? <HomeFooter/> :  <FooterDesktop/>}
+            {viewWidth && viewWidth < 576 ? 
+                <FooterMobile/>:
+                pathname === "/" ? 
+                    <HomeFooter/> :
+                    pathname === "/en" ? 
+                        <HomeFooter/> :  
+                        <FooterDesktop/>
+            }
+            {/* {viewWidth && viewWidth >= 576 && pathname === "/" ? <HomeFooter/> : pathname === "/en" ? <HomeFooter/> :  <FooterDesktop/>} */}
+            
         </>
     )
 }
