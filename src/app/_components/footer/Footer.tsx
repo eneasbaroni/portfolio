@@ -27,7 +27,7 @@ const Footer = () => {
     return (
         <>            
             {viewWidth && viewWidth < 576 && <FooterMobile/>}
-            {viewWidth && viewWidth >= 576 && pathname !== "/" ? <FooterDesktop/> : <HomeFooter/>}
+            {viewWidth && viewWidth >= 576 && pathname === "/" ? <HomeFooter/> : pathname === "/en" ? <HomeFooter/> :  <FooterDesktop/>}
         </>
     )
 }

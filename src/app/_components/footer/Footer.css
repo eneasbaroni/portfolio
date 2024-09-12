@@ -55,28 +55,52 @@ footer {
         justify-content: space-between;
         align-items: center;
         overflow-y: hidden;
+        position: relative;
+
+        & .footerContainer {
+            width: 100%;
+            height: 100%;
+            padding: 5vw 0 0;
+        }
 
 
         & .footerLinks {
             width: 100%;
-            padding: 5vw 5vw 0 0;
+            height: 100%;
+            padding: 5vw 0 0 0 ;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;           
+            align-items: flex-end; 
+            justify-content: space-around;          
               
             
             & .pageLinks, .socialLinks {
                 display: flex;
                 width: 200px;
                 flex-direction: column;
-                border: solid red 1px;
+                
 
                 & h4, .navItem {
                     font-size: 1.5rem;
                 }
 
+                & .navItem:hover, .scLink:hover a {
+                    color: var(--third-color) !important;
+                }
+
+                & .scLink:hover svg {
+                    filter: invert(39%) sepia(60%) saturate(1892%) hue-rotate(360deg) brightness(106%) contrast(105%);
+                }
+                
+
                 & a {
                     text-decoration: none;
+                }
+
+                & div {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
                 }
             }
             
@@ -91,13 +115,39 @@ footer {
         & h3 {            
             font-family: "Clash-Medium", sans-serif;
             font-weight: 700;
-            font-size: 12vw;
+            font-size: calc(13.5vw - 24px);
             line-height: 9vw;
             background: rgb(15,15,17);
             background: linear-gradient(180deg, rgba(15,15,17,0.15) 0%, rgba(15,15,17,0) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
+            /* @media screen and (max-width: 1273px) {
+                font-size: 11vw;
+            }
+
+            @media screen and (max-width: 806px) {
+                font-size: 10vw;
+            } */
+
+        }
+
+        & .langs {
+            
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+
+            & a {
+                font-size: 0.9rem;
+                text-decoration: none;
+                color: var(--main-bg);   
+                
+                &:hover {
+                    color: var(--third-color);
+                }
+            }
         }
     }
 }
