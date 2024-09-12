@@ -1,5 +1,6 @@
 #contact {
     
+    
     & a {
         text-decoration: none;
     }
@@ -53,6 +54,7 @@
     
     & .linksContainer {
         min-height: calc(100vh - 23px);
+        min-height: 100vh;
         padding-top: 3rem;
         width: 100%;
         display: flex;
