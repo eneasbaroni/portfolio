@@ -241,4 +241,5 @@ input {
     top: 100vh;
     z-index: 91;
     left: 0;
+    pointer-events: none;
 }
