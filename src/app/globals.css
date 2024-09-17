@@ -48,10 +48,17 @@ body {
     flex-direction: column;
     justify-content: space-between;
     overflow-x: hidden;
+    
+    scrollbar-color: black;
+    
 
     @media (max-width: 768px) {
         padding: 1rem 1.5rem 0;        
     }
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 p, label, input, .form-control {
@@ -222,6 +229,16 @@ input {
             margin-right: 1vw;
         
         }
-    }
-    
+    }    
+}
+
+/* transitions */
+#enterSvg, #exitSvg {
+    position: fixed;
+    width: 100vw;
+    height: 115vh;
+    /* background-color: red; */
+    top: 100vh;
+    z-index: 91;
+    left: 0;
 }

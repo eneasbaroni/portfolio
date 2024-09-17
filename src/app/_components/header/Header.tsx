@@ -21,6 +21,7 @@ const Header = () => {
 
   return (
     <>
+      {viewWidth === null && <header style={{height:'29px'}}></header>}
       {viewWidth && viewWidth < 576 && <MobileMenu/>}
       {viewWidth && viewWidth >= 576 && <DesktopMenu/>}      
     </>
