@@ -6,7 +6,6 @@ import './(es)/contact/Contact.css'
 import './_skeletons/work.skeletons.css'
 import './_components/header/Header.css'
 import './_components/footer/Footer.css'
-import Providers from "./_components/providers/providers";
 
 export default function RootLayout({children
 }: Readonly<{

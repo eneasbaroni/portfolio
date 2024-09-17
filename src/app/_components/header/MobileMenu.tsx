@@ -15,10 +15,10 @@ const MobileMenu = () => {
     }
 
     const close: () => void = () => {
-        setTopPosition("-100%")
         setTimeout(() => {            
+            /* setTopPosition("-100%") */
             setNavbarOpen(false)
-        }, 500)
+        }, 800)
     }
 
     const handleMenu = () => {

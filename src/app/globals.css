@@ -229,18 +229,16 @@ input {
             margin-right: 1vw;
         
         }
-    }
-    
+    }    
 }
-
 
 /* transitions */
 #enterSvg, #exitSvg {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 115vh;
     /* background-color: red; */
     top: 100vh;
-    z-index: 50;
+    z-index: 91;
     left: 0;
 }
