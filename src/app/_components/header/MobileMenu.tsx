@@ -43,7 +43,7 @@ const MobileMenu = () => {
     const close: () => void = () => {
         setTimeout(() => {
             setNavbarOpen(false)
-        }, 800)
+        }, 600)
     }
 
     const handleMenu = () => {
