@@ -50,8 +50,8 @@ const History = () => {
                     <img src="./images/about/hst-03.svg" alt="icon" className="hstImg" />
                     <div className={`hst${hstActive === 2 ? ' hstActive' : ''}`}>
                         <h3>DES<span className="nautica">A</span>RROL<span className="nautica">L</span>O</h3>
-                        <p>Mi pasión por la <span className={cormorant.className}>creación, el arte y el diseño,</span> me llevaron a explorar el mundo del <span className={cormorant.className}>desarrollo web,</span> donde me permito conjugar todas las experiencias y aptitudes adquiridas. Acutalmente dentro del MERN Stack.<br />
-                            Desde la conceptualización hasta el lanzamiento, disfruto de todo el proceso del desarrollo web. Me encanta la idea de poder transformar mis diseños en <span className={cormorant.className}>experiencias digitales interactivas</span> y poder brindar soluciones modernas a través del arte tecnología.</p>
+                        <p>Mi pasión por la <span className={cormorant.className}>creación, el arte y el diseño,</span> me llevaron a explorar el mundo del <span className={cormorant.className}>desarrollo web,</span> donde me permito conjugar todas las experiencias y aptitudes adquiridas. Actualmente dentro del MERN Stack.<br />
+                            Desde la conceptualización hasta el lanzamiento, disfruto de todo el proceso del desarrollo web. Me encanta la idea de poder transformar mis diseños en <span className={cormorant.className}>experiencias digitales interactivas</span> y poder brindar soluciones modernas a través del arte y la tecnología.</p>
                     </div>
                     <div className='smallbtn'>
                         <div className="light"></div>
